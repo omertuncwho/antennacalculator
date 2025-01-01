@@ -1,2 +1,2 @@
 # antennacalculator
-Ham-Radio-Antenna-Calculator
+Ham Radio Antenna Calculator
