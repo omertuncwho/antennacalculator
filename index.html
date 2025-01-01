@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antenna Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Antenna Calculator</h1>
+        
+        <form id="antenna-form">
+            <label for="frequency">Frequency (in MHz, e.g., 7 for 7 MHz):</label>
+            <input type="number" id="frequency" name="frequency" required step="0.01" min="1" placeholder="Enter frequency in MHz (1 - 30 MHz)">
+            
+            <label for="antenna-type">Antenna Type:</label>
+            <select id="antenna-type">
+                <option value="dipole">Dipole</option>
+                <option value="yagi">Yagi</option>
+                <option value="monopole">Monopole</option>
+                <option value="loop">Loop</option>
+            </select>
+
+            <button type="submit">Calculate</button>
+        </form>
+
+        <div id="result">
+            <h2>Results:</h2>
+            <p id="antenna-length"></p>
+            <p id="antenna-segments"></p>
+            <p id="material-list"></p>
+            <p id="notes"></p>
+        </div>
+
+        <div id="anten-info">
+            <h3>Antenna Types and Features</h3>
+            <ul>
+                <li><strong>Dipole:</strong> A widely used, basic antenna with two equal halves.</li>
+                <li><strong>Yagi:</strong> A directional antenna offering higher gain, suitable for longer distances.</li>
+                <li><strong>Monopole:</strong> A single-element antenna typically mounted on the ground.</li>
+                <li><strong>Loop:</strong> A compact antenna with a loop shape, often used for narrow frequency bands.</li>
+            </ul>
+        </div>
+
+        <div id="antenna-images">
+            <h3>Antenna Visuals:</h3>
+            <div id="dipole-image">
+                <img src="images/dipole-antenna.png" alt="Dipole Antenna" width="300">
+                <p>Dipole Antenna</p>
+            </div>
+            <div id="yagi-image">
+                <img src="images/yagi-antenna.png" alt="Yagi Antenna" width="300">
+                <p>Yagi Antenna</p>
+            </div>
+            <div id="monopole-image">
+                <img src="images/monopole-antenna.png" alt="Monopole Antenna" width="300">
+                <p>Monopole Antenna</p>
+            </div>
+            <div id="loop-image">
+                <img src="images/loop-antenna.png" alt="Loop Antenna" width="300">
+                <p>Loop Antenna</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
